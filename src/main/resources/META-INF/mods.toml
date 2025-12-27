@@ -28,7 +28,7 @@ side = "BOTH"
 [[dependencies.createbuildstonetoolkit]]
 modId = "buildstonetoolkit"
 mandatory = true
-versionRange = "[${bt_version},)"
+versionRange = "${bt_version}"
 ordering = "NONE"
 side = "BOTH"
 

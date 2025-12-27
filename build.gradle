@@ -147,10 +147,14 @@ dependencies {
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}"))
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
 
-    annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
+    modCompileOnly("mezz.jei:jei-${jei_minecraft_version}-common-api:${jei_version}")
+    modCompileOnly("mezz.jei:jei-${jei_minecraft_version}-forge-api:${jei_version}")
+    modImplementation("mezz.jei:jei-${jei_minecraft_version}-forge:${jei_version}")
 
     modImplementation("dev.architectury:architectury-forge:${architectury_api_version}")
-    modImplementation("com.github.hoshinofw.buildstonetoolkit:buildstonetoolkit-forge:${minecraft_version}-${buildstonetoolkit_version}")
+    modImplementation("com.github.hoshinofw.buildstonetoolkit:buildstonetoolkit-forge-${minecraft_version}:${buildstonetoolkit_version}")
+
+    annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 }
 
 processResources {

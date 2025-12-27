@@ -25,19 +25,14 @@ public abstract class ContraptionMixin {
             at = @At(value = "HEAD", remap = true))
     protected void beforeMoveBlock(Level world, @Nullable Direction forcedDirection, Queue<BlockPos> frontier, Set<BlockPos> visited, CallbackInfoReturnable<Boolean> cir
     ) {
-
         BlockPos pos = frontier.peek();
         if (pos == null) {return;}
         BlockState state = world.getBlockState(pos);
         if (state.getBlock() instanceof AssemblyProxyBlock assemblyProxyBlock) {
             if (!assemblyProxyBlock.isPowered(state)) {
-                BlockEntity be = world.getBlockEntity(pos);
-                if (be instanceof AssemblyProxyBlockEntity assemblyProxyBlockEntity) {
-                    CreateBuildstoneToolkit.LOGGER.info("Assembly found a proxy!");
-                    BlockPos targetPos = assemblyProxyBlockEntity.getTargetBlockPos();
-                    if (assemblyProxyBlockEntity.getTargetBlockPos() != null && !visited.contains(targetPos)) {
-                        frontier.add(targetPos);
-                    }
+                BlockPos targetPos = assemblyProxyBlock.getLinkedAbsPos(world, pos);
+                if (!visited.contains(targetPos)) {
+                    frontier.add(targetPos);
                 }
             }
         }

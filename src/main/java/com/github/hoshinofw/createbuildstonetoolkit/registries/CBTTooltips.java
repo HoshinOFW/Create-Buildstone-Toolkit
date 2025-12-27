@@ -10,7 +10,7 @@ public class CBTTooltips {
 
         ItemDescription.useKey(
                 CBTItems.ASSEMBLY_PROXY.get(),
-                "item" + CreateBuildstoneToolkit.MOD_ID +  "assembly_proxy"
+                "item." + CreateBuildstoneToolkit.MOD_ID +  ".assembly_proxy"
         );
 
         TooltipModifier.REGISTRY.register(

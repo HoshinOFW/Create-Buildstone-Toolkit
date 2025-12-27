@@ -9,8 +9,11 @@
   ],
   "mixins": [
     "ContraptionMixin",
-    "GuidedProxyBlockMixin",
-    "PistonProxyBlockMixin"
+    "InteractionProxyBlockMixin",
+    "ObserverProxyBlockMixin",
+    "PistonProxyBlockMixin",
+    "RedstoneProxyBlockMixin",
+    "VisionProxyBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

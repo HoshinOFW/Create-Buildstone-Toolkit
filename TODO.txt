@@ -1,2 +1,3 @@
 TODO
-    proxy not working
+    Crashes on proxy selection sometimes.
+        targetPos = null in BuildstoneCommonEvents
