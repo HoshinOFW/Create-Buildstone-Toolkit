@@ -19,7 +19,6 @@ public final class CreateBuildstoneToolkit {
         CBTBlocks.register(modBus);
         CBTBlockEntities.register(modBus);
         CBTItems.register(modBus);
-        CBTCreativeTabs.register(modBus);
         LOGGER.info("Construct finished!");
     }
 }
