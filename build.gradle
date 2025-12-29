@@ -138,7 +138,7 @@ repositories {
 dependencies {
     modCompileOnly("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_version_number}:all")
     modRuntimeOnly("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_version_number}:slim")
-    //modImplementation("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_version_number}:slim") { transitive = false }
+
     modImplementation("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}")
     modCompileOnly("dev.engine-room.flywheel:flywheel-forge-api-${flywheel_minecraft_version}:${flywheel_version}")
     modRuntimeOnly("dev.engine-room.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")

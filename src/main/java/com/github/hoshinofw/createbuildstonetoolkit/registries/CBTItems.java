@@ -17,7 +17,6 @@ public class CBTItems {
     public static final Supplier<Item> ASSEMBLY_PROXY = ITEMS.register("assembly_proxy",
             () -> new BlockItem(CBTBlocks.ASSEMBLY_PROXY.get(),
                     ((InjectedItemPropertiesExtension) new Item.Properties()).arch$tab(CreativeModeTabs.REDSTONE_BLOCKS)
-                    //new Item.Properties()
             ));
 
     public static void register(IEventBus modbus) {
