@@ -1,0 +1,1 @@
+- Bumped Buildstone Toolkit version to 0.4

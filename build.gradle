@@ -148,7 +148,7 @@ processResources {
     var replaceProperties = [
             mod_id          : mod_id,
             bt_version      : buildstonetoolkit_version,
-            version         : mod_version,
+            mod_version         : mod_version,
             create_version  : create_version,
             max_supported_create_version : max_supported_create_version,
             mod_name        : mod_name,
