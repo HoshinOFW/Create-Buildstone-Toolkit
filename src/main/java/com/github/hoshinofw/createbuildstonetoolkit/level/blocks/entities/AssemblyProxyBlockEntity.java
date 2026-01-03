@@ -2,15 +2,12 @@ package com.github.hoshinofw.createbuildstonetoolkit.level.blocks.entities;
 
 import com.github.hoshinofw.buildstonetoolkit.foundation.common.blocks.entity.unstable.IdProxyBlockEntity;
 import com.github.hoshinofw.createbuildstonetoolkit.registries.CBTBlockEntities;
-import com.github.hoshinofw.createbuildstonetoolkit.util.APUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
 
 public class AssemblyProxyBlockEntity extends IdProxyBlockEntity<AssemblyProxyBlockEntity> {
-
     public static final String NBT_REL_POS_KEY = "buildstonetoolkit$relativeTarget";
 
     public AssemblyProxyBlockEntity(BlockPos arg2, BlockState arg3) {
@@ -33,4 +30,6 @@ public class AssemblyProxyBlockEntity extends IdProxyBlockEntity<AssemblyProxyBl
         super.loadAdditional(nbt, registries);
         this.setLinkedRelPos(nbt.getLong(NBT_REL_POS_KEY));
     }
+
+
 }

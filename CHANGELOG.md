@@ -1,1 +1,2 @@
-- Bumped Buildstone Toolkit version to 1.0
+- Bumped Buildstone Toolkit version to 1.1.5
+- Fixed crash

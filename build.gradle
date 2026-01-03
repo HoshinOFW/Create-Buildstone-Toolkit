@@ -123,9 +123,6 @@ repositories {
 
 dependencies {
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_version_number}:slim") { transitive = false }
-    //modCompileOnly("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_version_number}:all")
-    //modRuntimeOnly("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_version_number}:slim")
-    //modImplementation("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_version_number}:slim") { transitive = false }
     implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
     compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
@@ -148,17 +145,19 @@ processResources {
     var replaceProperties = [
             mod_id          : mod_id,
             bt_version      : buildstonetoolkit_version,
-            mod_version         : mod_version,
+            mod_version     : mod_version,
             create_version  : create_version,
             max_supported_create_version : max_supported_create_version,
             mod_name        : mod_name,
             mod_author      : mod_author,
             mod_description : mod_description,
             mod_license     : mod_license,
-            minecraft_version: minecraft_version
+            minecraft_version: minecraft_version,
+            file             : [jarVersion: project.mod_version]
     ]
 
-    replaceProperties.put("file", [jarVersion: project.version])
+    inputs.properties(replaceProperties)
+    filteringCharset = "UTF-8"
 
     filesMatching('META-INF/neoforge.mods.toml') {
         expand(replaceProperties)
