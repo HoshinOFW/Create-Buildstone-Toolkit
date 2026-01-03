@@ -168,10 +168,12 @@ processResources {
             mod_author      : mod_author,
             mod_description : mod_description,
             mod_license     : mod_license,
-            minecraft_version: minecraft_version
+            minecraft_version: minecraft_version,
+            file             : [jarVersion: project.mod_version],
     ]
 
-    replaceProperties.put("file", [jarVersion: project.version])
+    inputs.properties(replaceProperties)
+    filteringCharset = "UTF-8"
 
     filesMatching('META-INF/mods.toml') {
         expand(replaceProperties)
