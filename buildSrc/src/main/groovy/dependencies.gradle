@@ -1,0 +1,28 @@
+dependencies {
+    modCompileOnly("com.simibubi.create:create-${minecraft_version}:${create_version}:all")
+    modRuntimeOnly("com.simibubi.create:create-${minecraft_version}:${create_version}:slim")
+
+    modImplementation("net.createmod.ponder:Ponder-${multiversion.moduleTypeCapitalized()}-${minecraft_version}:${ponder_version}")
+
+    String flywheelModule = multiversion.isMcVersion("1.20.1") ? "forge" : "neoforge"
+    modCompileOnly("dev.engine-room.flywheel:flywheel-$flywheelModule-api-${minecraft_version}:${flywheel_version}")
+    modRuntimeOnly("dev.engine-room.flywheel:flywheel-$flywheelModule-${minecraft_version}:${flywheel_version}")
+    modImplementation("com.tterrag.registrate:Registrate:${registrate_version}")
+
+    implementation(jarJar("io.github.llamalad7:mixinextras-${multiversion.moduleType()}:${mixin_extras_version}"))
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+
+    modCompileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    modCompileOnly("mezz.jei:jei-${minecraft_version}-${multiversion.moduleType()}-api:${jei_version}")
+    modImplementation("mezz.jei:jei-${minecraft_version}-${multiversion.moduleType()}:${jei_version}")
+
+    if (multiversion.isCommon()) {
+        modImplementation("dev.architectury:architectury:${architectury_api_version}")
+    } else {
+        modImplementation("dev.architectury:architectury-${multiversion.moduleType()}:${architectury_api_version}")
+
+    }
+
+    modImplementation("com.github.hoshinofw.buildstonetoolkit:buildstonetoolkit-${multiversion.moduleType()}-${minecraft_version}:${buildstone_toolkit_version}")
+
+}
