@@ -1,8 +1,7 @@
-package com.github.hoshinofw.createbuildstonetoolkit.registries;
+package com.github.hoshinofw.createbuildstonetoolkit.foundation.common.registries;
 
-import com.github.hoshinofw.createbuildstonetoolkit.core.CreateBuildstoneToolkit;
+import com.github.hoshinofw.createbuildstonetoolkit.foundation.common.core.CreateBuildstoneToolkit;
 import com.simibubi.create.foundation.item.ItemDescription;
-import com.simibubi.create.foundation.item.TooltipHelper;
 import com.simibubi.create.foundation.item.TooltipModifier;
 import net.createmod.catnip.lang.FontHelper;
 

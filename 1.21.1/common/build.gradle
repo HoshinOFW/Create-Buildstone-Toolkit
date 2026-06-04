@@ -1,0 +1,6 @@
+plugins {
+    id 'repositories'
+    id "multiloader-common-module-setup"
+    id "multiloader-configuration-alias"
+    id "dependencies"
+}

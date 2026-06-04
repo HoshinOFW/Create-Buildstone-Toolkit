@@ -4,6 +4,7 @@ repositories {
     maven {url "https://maven.neoforged.net"}
     maven { url = "https://maven.createmod.net" } // Ponder, Flywheel
     maven { url = "https://maven.ithundxr.dev/mirror" } // Registrate
+    maven { url = "https://maven.jamieswhiteshirt.com/libs-release" }
     maven { url = "https://maven.blamejared.com" } // JEI, Vazkii's Mods
     maven { url = "https://harleyoconnor.com/maven" } // Dynamic Trees
     maven { url = "https://maven.theillusivec4.top/" } // Curios API
@@ -19,9 +20,33 @@ repositories {
             includeGroup "mysticdrew"
         }
     }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
     maven {url = 'https://maven.minecraftforge.net/'}
     maven { url = "https://maven.architectury.dev/" }
     maven { url = "https://jitpack.io" }
     maven { url = "https://maven.terraformersmc.com/" }
     maven { url = "https://mvn.devos.one/snapshots" }
+    maven { url = "https://maven.shedaniel.me" } // Cloth Config, REI
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven" } // Fuzs (Forge Config API Port)
+    maven { url = "https://maven.tterrag.com/" } // tterrag
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://maven.ryanhcode.dev/releases"
+                name = "RyanHCode Maven"
+            }
+        }
+        filter {
+            includeGroup("dev.ryanhcode.sable")
+            includeGroup("dev.ryanhcode.sable-companion")
+            includeGroup("dev.simulated_team.simulated")
+            includeGroup("dev.ryanhcode.offroad")
+            includeGroup("dev.eriksonn.aeronautics")
+
+        }
+    }
 }

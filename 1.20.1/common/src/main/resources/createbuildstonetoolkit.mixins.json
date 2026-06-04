@@ -1,7 +1,7 @@
 {
   "required": true,
   "priority": 1100,
-  "package": "com.github.hoshinofw.createbuildstonetoolkit.mixin",
+  "package": "com.github.hoshinofw.createbuildstonetoolkit.foundation.common.mixin",
   "refmap": "createbuildstonetoolkit.refmap.json",
   "compatibilityLevel": "JAVA_16",
   "minVersion": "0.8",

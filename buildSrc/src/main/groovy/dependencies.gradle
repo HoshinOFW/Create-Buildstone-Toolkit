@@ -1,5 +1,5 @@
 dependencies {
-    modCompileOnly("com.simibubi.create:create-${minecraft_version}:${create_version}:all")
+    modCompileOnly("com.simibubi.create:create-${minecraft_version}:${create_version}:slim")
     modRuntimeOnly("com.simibubi.create:create-${minecraft_version}:${create_version}:slim")
 
     modImplementation("net.createmod.ponder:Ponder-${multiversion.moduleTypeCapitalized()}-${minecraft_version}:${ponder_version}")
@@ -17,7 +17,8 @@ dependencies {
     modImplementation("mezz.jei:jei-${minecraft_version}-${multiversion.moduleType()}:${jei_version}")
 
     if (multiversion.isCommon()) {
-        modImplementation("dev.architectury:architectury:${architectury_api_version}")
+        String commonArchVersion = multiversion.isMcVersion("1.20.1") ? "forge" : "neoforge"
+        modCompileOnly "dev.architectury:architectury-$commonArchVersion:${project.architectury_api_version}"
     } else {
         modImplementation("dev.architectury:architectury-${multiversion.moduleType()}:${architectury_api_version}")
 

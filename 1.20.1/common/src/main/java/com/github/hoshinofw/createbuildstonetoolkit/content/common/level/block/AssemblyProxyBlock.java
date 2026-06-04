@@ -1,7 +1,7 @@
-package com.github.hoshinofw.createbuildstonetoolkit.level.blocks;
+package com.github.hoshinofw.createbuildstonetoolkit.content.common.level.block;
 
-import com.github.hoshinofw.buildstonetoolkit.foundation.common.blocks.IdProxyBlock;
-import com.github.hoshinofw.createbuildstonetoolkit.level.blocks.entities.AssemblyProxyBlockEntity;
+import com.github.hoshinofw.buildstonetoolkit.foundation.common.blocks.ProxyBlock;
+import com.github.hoshinofw.createbuildstonetoolkit.content.common.level.block.entity.AssemblyProxyBlockEntity;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
-public class AssemblyProxyBlock extends IdProxyBlock<AssemblyProxyBlockEntity> implements IWrenchable {
+public class AssemblyProxyBlock extends ProxyBlock<AssemblyProxyBlock, AssemblyProxyBlockEntity> implements IWrenchable {
     public static final BooleanProperty POWERED = BooleanProperty.create("powered");
 
     public AssemblyProxyBlock(Properties arg) {
