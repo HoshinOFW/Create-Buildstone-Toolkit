@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "priority": 1100,
+  "package": "com.github.hoshinofw.createbuildstonetoolkit.foundation.common.mixin",
+  "refmap": "createbuildstonetoolkit.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "ContraptionMixin",
+    "InteractionProxyBlockMixin",
+    "ObserverProxyBlockMixin",
+    "PistonProxyBlockMixin",
+    "RedstoneProxyBlockMixin",
+    "VisionProxyBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
