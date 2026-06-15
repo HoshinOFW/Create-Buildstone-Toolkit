@@ -40,37 +40,4 @@ public abstract class ContraptionMixin {
             }
         }
     }
-
-    @WrapOperation(method = "moveBlock",
-            at = @At(value = "INVOKE",
-                    target = "Lcom/simibubi/create/content/contraptions/Contraption;capture(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lorg/apache/commons/lang3/tuple/Pair;"))
-    private Pair<StructureTemplate.StructureBlockInfo, BlockEntity> wrapCapture(
-            Contraption self, Level world, BlockPos pos,
-            Operation<Pair<StructureTemplate.StructureBlockInfo, BlockEntity>> original
-    ) {
-        return captureWithRelativeTarget(self, world, pos, original);
-    }
-
-    @WrapOperation(method = "movePulley",
-            at = @At(value = "INVOKE",
-                    target = "Lcom/simibubi/create/content/contraptions/Contraption;capture(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lorg/apache/commons/lang3/tuple/Pair;"))
-    private Pair<StructureTemplate.StructureBlockInfo, BlockEntity> wrapCapturePulley(
-            Contraption self, Level world, BlockPos pos,
-            Operation<Pair<StructureTemplate.StructureBlockInfo, BlockEntity>> original
-    ) {
-        return captureWithRelativeTarget(self, world, pos, original);
-    }
-
-    private static Pair<StructureTemplate.StructureBlockInfo, BlockEntity> captureWithRelativeTarget(
-            Contraption self, Level world, BlockPos pos,
-            Operation<Pair<StructureTemplate.StructureBlockInfo, BlockEntity>> original
-    ) {
-        boolean previous = ProxyBlockEntity.storePositionAsRelative.get();
-        ProxyBlockEntity.storePositionAsRelative.set(true);
-        try {
-            return original.call(self, world, pos);
-        } finally {
-            ProxyBlockEntity.storePositionAsRelative.set(previous);
-        }
-    }
 }

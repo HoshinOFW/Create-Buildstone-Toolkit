@@ -54,7 +54,6 @@ legacyForge {
             systemProperty("mixin.debug.verbose", "true")
 
             programArgument("-mixin.config=${mod_id}.mixins.json")
-            programArgument("-mixin.config=ponder.mixins.json")
         }
 
         client {

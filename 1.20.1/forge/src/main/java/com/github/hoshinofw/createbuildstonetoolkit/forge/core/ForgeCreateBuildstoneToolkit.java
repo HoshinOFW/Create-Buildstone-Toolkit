@@ -18,8 +18,5 @@ public final class ForgeCreateBuildstoneToolkit {
         EventBuses.registerModEventBus(CreateBuildstoneToolkit.MOD_ID, modBus);
 
         CreateBuildstoneToolkit.init();
-
-        //TODO Is this needed?
-        modBus.addGenericListener(CBTForgeEvents.class, (t) -> {});
     }
 }

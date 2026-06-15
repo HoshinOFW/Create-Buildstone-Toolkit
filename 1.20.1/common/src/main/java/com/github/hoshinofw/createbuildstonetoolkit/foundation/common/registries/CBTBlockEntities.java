@@ -1,5 +1,6 @@
 package com.github.hoshinofw.createbuildstonetoolkit.foundation.common.registries;
 
+import com.github.hoshinofw.buildstonetoolkit.foundation.common.registries.BuildstoneBlockEntities;
 import com.github.hoshinofw.createbuildstonetoolkit.content.common.level.block.entity.AssemblyProxyBlockEntity;
 import com.github.hoshinofw.createbuildstonetoolkit.foundation.common.core.CreateBuildstoneToolkit;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -21,6 +22,7 @@ public class CBTBlockEntities {
 
     public static void register() {
         BLOCK_ENTITY_TYPES.register();
+        BuildstoneBlockEntities.registerProxyType(ASSEMBLY_PROXY);
     }
 
 }

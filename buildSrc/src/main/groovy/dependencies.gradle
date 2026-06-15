@@ -24,6 +24,10 @@ dependencies {
 
     }
 
+    if (multiversion.isMcVersion("1.20.1") && multiversion.isForge()) {
+        modRuntimeOnly("maven.modrinth:mixinbooster:${project.mixin_booster_version}")
+    }
+
     modImplementation("com.github.hoshinofw.buildstonetoolkit:buildstonetoolkit-${multiversion.moduleType()}-${minecraft_version}:${buildstone_toolkit_version}")
 
 }

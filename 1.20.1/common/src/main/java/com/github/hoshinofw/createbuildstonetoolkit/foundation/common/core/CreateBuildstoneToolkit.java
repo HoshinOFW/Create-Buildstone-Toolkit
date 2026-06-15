@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class CreateBuildstoneToolkit {
 
-    public static final String MOD_ID = "assets/createbuildstonetoolkit";
+    public static final String MOD_ID = "createbuildstonetoolkit";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static void init() {

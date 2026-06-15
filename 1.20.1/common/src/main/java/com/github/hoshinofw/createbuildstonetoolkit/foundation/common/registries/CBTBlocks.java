@@ -4,6 +4,7 @@ package com.github.hoshinofw.createbuildstonetoolkit.foundation.common.registrie
 
 import com.github.hoshinofw.buildstonetoolkit.foundation.common.core.BuildstoneToolkit;
 import com.github.hoshinofw.createbuildstonetoolkit.content.common.level.block.AssemblyProxyBlock;
+import com.github.hoshinofw.createbuildstonetoolkit.foundation.common.core.CreateBuildstoneToolkit;
 import dev.architectury.registry.registries.DeferredRegister;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
@@ -14,7 +15,7 @@ import java.util.function.Supplier;
 
 public class CBTBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuildstoneToolkit.MOD_ID, Registries.BLOCK);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(CreateBuildstoneToolkit.MOD_ID, Registries.BLOCK);
 
     public static final Supplier<AssemblyProxyBlock> ASSEMBLY_PROXY = BLOCKS.register("assembly_proxy",
             () -> new AssemblyProxyBlock(BlockBehaviour.Properties.of()
