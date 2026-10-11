@@ -6,6 +6,7 @@ plugins {
 base {
     group = maven_group
     archivesName = "${mod_id}-${project.name}-${minecraft_version}"
+    version = project.mod_version
 }
 
 java {
